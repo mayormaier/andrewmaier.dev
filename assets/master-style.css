@@ -1,0 +1,71 @@
+@font-face{
+    font-family: AppleSFBold;
+    src: url(../assets/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+    font-family: AppleSFText;
+    src: url(/assets/);
+}
+
+* {
+    text-decoration: none;
+    margin: 0px 0px;
+}
+
+body {
+    background-color: #1b2631;
+}
+h1, h2, h3, h4, h5 {
+    font-family: AppleSFBold;
+    color: #cdcdcd;
+}
+h1 {
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+
+a {
+    font-family: AppleSFBold;
+    color: #cdcdcd; 
+}
+a:hover {
+    color: azure !important;
+    transition: color 0.2s;
+    transition-timing-function: ease;
+}
+a:visited {
+    color: #cdcdcd;
+}
+a:active {
+    color: #aed6f1;
+}
+
+.nav {
+    z-index: 5;
+    position: relative;
+    font-family: AppleSFBold;
+    font-size: 18px;
+    padding: 8px 10px;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} 
+.nav li {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+}  
+
+  
+.content {
+    text-align: center;
+    padding-top: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+}
