@@ -1,6 +1,10 @@
 @font-face{
     font-family: AppleSF;
-    src: url(../assets/SF-Pro-Display-Bold.otf);
+    src: url(SF-Pro-Display-Bold.otf);
+}
+@font-face {
+    font-family: AppleSFText;
+    src: url(SF-Pro-Text-Regular.otf);
 }
 @keyframes move-twink-back {
     from {background-position:0 0;}
@@ -17,11 +21,6 @@
 @-ms-keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
-}
-
-* {
-    margin: 0;
-    padding: 0;
 }
 
 .headings {
@@ -43,12 +42,15 @@ h3{
     font-size: 35px;
     text-align: center;
 }
+p {
+    font-family: AppleSFText;
+}
 
 .nav {
     z-index: 5;
     position: relative;
     font-family: AppleSF;
-    font-size: 18px;
+    font-size: 22px;
     padding: 8px 10px;
 }
 
@@ -89,7 +91,18 @@ li a:hover {
     padding: 14px
 }
 
-
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    z-index: 5;
+    color: #cdcdcd;
+    vertical-align: middle;
+}
 
 ion-icon {
     font-size: 30px;
@@ -108,12 +121,12 @@ ion-icon {
 }
 
 .stars {
-  background:rgb(0, 0, 0) url(../assets/stars.png) repeat top center;
+  background:rgb(0, 0, 0) url(stars.png) repeat top center;
   z-index:0;
 }
 
 .twinkling{
-  background:transparent url(../assets/twinkling.png) repeat top center;
+  background:transparent url(twinkling.png) repeat top center;
   z-index:1;
 
   -moz-animation:move-twink-back 200s linear infinite;
