@@ -23,6 +23,10 @@
     to {background-position:-10000px 5000px;}
 }
 
+*{
+    margin: 0;
+}
+
 .headings {
     font-size: 45px;
     font-family: AppleSF;
@@ -31,16 +35,15 @@
     color: #cdcdcd;
     position: relative;
     z-index: 5;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 10%;
-    padding-bottom: 5%;
 }
 
 h3{
-    margin-top: 25px;
     font-size: 35px;
     text-align: center;
+    padding-top: 25px;
 }
 p {
     font-family: AppleSFText;
@@ -85,6 +88,7 @@ li a:hover {
     width: 174px;
     margin: auto;
     text-align: center!important;
+    padding-top: 25px;
 }
 
 .social-icons li a{
