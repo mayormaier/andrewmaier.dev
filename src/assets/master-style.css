@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: AppleSFText;
-    src: url(SF-Pro-Text-Regular.otf);
+    src: url(SanFranciscoText-Regular.otf);
 }
 
 * {
@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5 {
     color: #cdcdcd;
 }
 h1 {
+    font-size: 42px;
+    text-decoration: underline;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -27,6 +29,7 @@ h2 {
     font-size: 30px;
 }
 p {
+    font-size: 18px;
     font-family: AppleSFText;
     color: #cdcdcd;
     padding-top: 20px;
@@ -49,9 +52,13 @@ a:active {
     color: #aed6f1;
 }
 
+.title {
+    font-size: 32px;
+    padding-top: 5px !important;
+    color: azure !important;
+}
+
 .nav {
-    z-index: 5;
-    position: relative;
     font-family: AppleSFBold;
     font-size: 22px;
     padding: 8px 10px;
@@ -85,6 +92,11 @@ a:active {
     padding-right: 10%;
 }
 
+.about-content img {
+    width: 40%;
+    float: left;
+}
+
 .side-image {
     left: 0;
     bottom: 0;
@@ -95,4 +107,17 @@ a:active {
 .side-image img {
     width: 375px;
     height: 436px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    z-index: 5;
+    color: #cdcdcd;
+    vertical-align: middle;
 }
