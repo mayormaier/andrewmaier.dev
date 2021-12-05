@@ -28,6 +28,10 @@ h1 {
 h2 {
     font-size: 30px;
 }
+h3 {
+    font-size: 24px;
+    padding-bottom: 5px;
+}
 p {
     font-size: 18px;
     font-family: AppleSFText;
@@ -95,6 +99,65 @@ a:active {
 .about-content img {
     width: 40%;
     float: left;
+}
+
+.tile-content {
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    height: max-content;
+    overflow: auto;
+    background-color: #3F444A;
+}
+.tile-image {
+    float: left;
+    width: 25%;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+.tile-image img {
+    width: 200px;
+    height: 133px;
+    vertical-align: middle;
+}
+.tile-text {
+    float: right;
+    width: 70%;
+}
+.tile-content p {
+    padding: 0;
+}
+.tile-content li{
+    font-family: AppleSFText;
+    text-align: center;
+    color: #cdcdcd;
+    display: block;
+    float: left;
+    padding: 7px;
+    margin: 5px;
+    background-color: rgba(0, 145, 255, 0.201);
+    border-radius: 15px;
+}
+.tile-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.tile-content a :hover{
+    background-color: #1b2631;
+    color: #aed6f1;
+    transition: color 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.tool-highlights{
+    margin-top: 10px;
+}
+
+.clr{
+    clear: both;
+    font-size: 0;
 }
 
 .side-image {
