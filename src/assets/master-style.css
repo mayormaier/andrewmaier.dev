@@ -96,9 +96,20 @@ a:active {
     padding-right: 10%;
 }
 
-.about-content img {
-    width: 40%;
+.about-content .about-image{
     float: left;
+    width: 30%;
+    padding: 20px;
+}
+.about-content .about-text{
+    float: right;
+    width: 60%;
+}
+.about-content img {
+    vertical-align: middle;
+    align-content: center;
+    width: 486px;
+    height: 486px;
 }
 
 .tile-content {
