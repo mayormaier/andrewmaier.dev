@@ -96,14 +96,22 @@ a:active {
     padding-right: 10%;
 }
 
+.about-content{
+    display: inline-block;
+}
+
 .about-content .about-image{
     float: left;
     width: 30%;
     padding: 20px;
+    margin: 10px;
+    display: inline-block;
 }
 .about-content .about-text{
     float: right;
     width: 60%;
+    margin: 10px;
+    display: inline-block;
 }
 .about-content img {
     vertical-align: middle;
@@ -122,10 +130,12 @@ a:active {
     background-color: #3F444A;
 }
 .tile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     float: left;
     width: 25%;
     margin-top: 20px;
-    vertical-align: middle;
 }
 .tile-image img {
     width: 200px;
