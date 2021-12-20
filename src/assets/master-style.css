@@ -38,6 +38,10 @@ p {
     color: #cdcdcd;
     padding-top: 20px;
 }
+img {
+    display: block;
+    max-width: 100%;
+}
 
 
 a {
@@ -92,8 +96,9 @@ a:active {
 
 .container {
     padding-top: 25px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-inline: auto;
+    margin-inline: auto;
+    width: min(90%, 70.5rem)
 }
 
 .about-content{
@@ -102,22 +107,19 @@ a:active {
 
 .about-content .about-image{
     float: left;
-    width: 30%;
+    width: 35%;
     padding: 20px;
-    margin: 10px;
     display: inline-block;
 }
 .about-content .about-text{
     float: right;
-    width: 60%;
+    width: 55%;
     margin: 10px;
     display: inline-block;
 }
 .about-content img {
     vertical-align: middle;
     align-content: center;
-    width: 486px;
-    height: 486px;
 }
 
 .tile-content {
@@ -130,16 +132,16 @@ a:active {
     background-color: #3F444A;
 }
 .tile-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     float: left;
     width: 25%;
-    margin-top: 20px;
 }
 .tile-image img {
-    width: 200px;
-    height: 133px;
+    vertical-align: middle;
+    max-height: max(7.5rem);
+}
+.tile-image .helper {
+    display: inline-block;
+    height: 100%;
     vertical-align: middle;
 }
 .tile-text {
@@ -194,7 +196,6 @@ a:active {
 }
 
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
