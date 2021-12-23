@@ -2,15 +2,15 @@ version: '3.4'
 
 services:
  web:
-   image: nginx:stable-alpine
-   restart: always
-   volumes:
-    - ./src:/public_html
-    - ./nginx:/etc/nginx/conf.d
-    - ./dhparam:/etc/nginx/dhparam
-    - ./certbot/conf:/etc/nginx/ssl
-    - ./certbot/data:/usr/share/nginx/html/letsencrypt
-   ports:
+  image: nginx:stable-alpine
+  restart: always
+  volumes:
+   - ./src:/public_html
+   - ./nginx:/etc/nginx/conf.d
+   - ./dhparam:/etc/nginx/dhparam
+   - ./certbot/conf:/etc/nginx/ssl
+   - ./certbot/data:/usr/share/nginx/html/letsencrypt
+  ports:
     - 10.0.50.22:80:80
     - 10.0.50.22:443:443
 
