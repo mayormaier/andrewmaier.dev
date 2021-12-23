@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+ web:
+   image: nginx:stable-alpine
+   restart: always
+   volumes:
+    - /vol:/vol/ 
+    - ./src:/public_html
+    - ./nginx:/etc/nginx/conf.d
+    - ./dhparam:/etc/nginx/dhparam
+    - ./certbot/conf:/etc/nginx/ssl
+    - ./certbot/data:/usr/share/nginx/html/letsencrypt
+   ports:
+    - 80:80
+    - 443:443
+
+ certbot:
+  image: certbot/certbot:latest
+  command: certonly --webroot-path=/usr/share/nginx/html/letsencrypt --email maierandrewd@gmail.com --agree-tos --no-eff-email -d local.andrewmaier.dev
+  volumes:
+   - ./certbot/conf:/etc/letsencrypt
+   - ./certbot/logs:/var/log/letsencrypt
+   - ./certbot/data:/usr/share/nginx/html/letsencrypt
