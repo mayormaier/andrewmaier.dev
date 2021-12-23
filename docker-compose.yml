@@ -5,7 +5,6 @@ services:
    image: nginx:stable-alpine
    restart: always
    volumes:
-    - /vol:/vol/ 
     - ./src:/public_html
     - ./nginx:/etc/nginx/conf.d
     - ./dhparam:/etc/nginx/dhparam
