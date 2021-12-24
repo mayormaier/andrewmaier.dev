@@ -11,12 +11,12 @@ services:
    - ./certbot/conf:/etc/nginx/ssl
    - ./certbot/data:/usr/share/nginx/html/letsencrypt
   ports:
-    - 10.0.50.22:80:80
-    - 10.0.50.22:443:443
+    - 80:80
+    - 443:443
 
  certbot:
   image: certbot/certbot:latest
-  command: certonly --webroot -w /usr/share/nginx/html/letsencrypt --email maierandrewd@gmail.com --agree-tos --no-eff-email -d local.andrewmaier.dev
+  command: certonly --webroot -w /usr/share/nginx/html/letsencrypt --email email@email.com --agree-tos --no-eff-email -d local.andrewmaier.dev
   volumes:
    - ./certbot/conf:/etc/letsencrypt
    - ./certbot/logs:/var/log/letsencrypt
