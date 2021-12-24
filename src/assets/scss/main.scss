@@ -76,7 +76,6 @@ header {
     width: 35px;
     height: 35px;
     cursor: pointer;
-    //z-index: 10;
 
     appearance: none;
     background: none;
@@ -87,7 +86,6 @@ header {
 .hamburger .bar, .hamburger::after, .hamburger::before {
     content: '';
     display: block;
-    //z-index: 99;
     width: 100%;
     height: 5px;
     background-color: #FFF;
