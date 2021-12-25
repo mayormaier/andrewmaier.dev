@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #1b2631;
+}
+
+header {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+header .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+}
+
+@media (max-width: 1025px) {
+  header .container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+header .container h2 {
+  color: inherit;
+  font-size: 2em;
+}
+
+header .container nav {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 16px;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+}
+
+@media (max-width: 767px) {
+  header .container nav {
+    display: none;
+  }
+}
+
+header .container nav a {
+  color: inherit;
+  font-size: 20px;
+}
+
+header.is-scrolling {
+  background-color: #121a21;
+}
+
+header.is-scrolling .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.hamburger {
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #FFF;
+  margin: 6px 0px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hamburger.is-active::before {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+          transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active::after {
+  -webkit-transform: rotate(45deg) translate(-8px, -7px);
+          transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 5;
+  background-color: #1a1a1a;
+  padding-top: 120px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+.mobile-nav a:hover {
+  background-color: #383838;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+.content-container {
+  max-width: 1600px;
+  padding-left: 128px;
+  padding-right: 128px;
+  padding-top: 128px;
+  color: white;
+}
+
+.content-container h1 {
+  text-decoration: underline;
+}
+
+.content-container h2 {
+  padding-top: 35px;
+}
+
+.content-container p {
+  padding-top: 20px;
+}
+
+.content-container .about-content {
+  display: inline-block;
+}
+
+.content-container .about-content .about-image {
+  float: left;
+  width: 35%;
+  padding: 20px;
+}
+
+@media (max-width: 1025px) {
+  .content-container .about-content .about-image {
+    display: none;
+  }
+}
+
+.content-container .about-content .about-text {
+  float: right;
+  width: 55%;
+}
+
+@media (max-width: 1025px) {
+  .content-container .about-content .about-text {
+    width: 100%;
+  }
+}
+
+.content-container .about-content img {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 1025px) {
+  .content-container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  z-index: 5;
+  color: #cdcdcd;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=about.css.map */
