@@ -277,7 +277,7 @@ li a:hover {
 }
 
 .social-icons-row {
-    z-index: 5;
+    z-index: 3;
     position: relative;
     width: 174px;
     margin: auto;
@@ -297,7 +297,7 @@ li a:hover {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-    z-index: 5;
+    z-index: 3;
     color: #cdcdcd;
     vertical-align: middle;
 }
