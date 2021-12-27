@@ -130,6 +130,10 @@ header {
     color: inherit;
     font-size: 20px;
   }
+
+  header .container nav a:hover {
+    font-weight: bold;
+  }
   
   header.is-scrolling {
     background-color: #121a21;
