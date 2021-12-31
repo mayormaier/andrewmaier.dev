@@ -213,7 +213,6 @@ header.is-scrolling .container {
 
 .content-container .about-image-2 img {
   max-width: 50%;
-  max-height: 25%;
 }
 
 .content-container img {
@@ -255,6 +254,7 @@ header.is-scrolling .container {
 
 .content-container .about-content .about-image img {
   max-width: 100%;
+  max-height: 350px;
 }
 
 .content-container .about-content .about-text {
