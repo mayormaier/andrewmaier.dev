@@ -4,9 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Andrew Maier: Tools</title>
+    <link rel="stylesheet" href="/assets/css/tools.css">
+
+    <link rel="apple-touch-icon" sizes="160x160" href="/rocket-fav/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/rocket-fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/rocket-fav/favicon-16x16.png">
+    <link rel="manifest" href="/rocket-fav/site.webmanifest">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h2><a href="/">Andrew Maier 🚀</a></h2>
+            <nav>
+                <a href="/about/">About</a>
+                <a href="/tools/">Tools</a>
+                <a href="/projects/">Projects</a>
+            </nav>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <a href="/about/">About</a>
+        <a href="/tools/">Tools</a>
+        <a href="/projects/">Projects</a>
+    </nav>
+
+    <div class="content-container">
+        <h1>Tools</h1>
+
+        <h2>These are some of the tools and technologies that I've used within my work and personal projects. See the <a href="/projects">projects</a> page for examples of my skills in action.</h2>
     
+        <section class="projects" id="projects">
+			<div class="container">
+				<div class="projects-grid">
+					<div class="project" id="aws">
+						<div class="content">
+							<h3>AWS</h3>
+							<p>Amazon Web Services enables highly available and scalable infrastructure in the cloud. I've had experence administering and deploying many of their compute, container, and serverless offerings.</p>
+							<a href="https://aws.amazon.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+					<div class="project" id="nginx">
+						<div class="content">
+							<h3>Nginx</h3>
+							<p>Nginx is a HTTP server, and reverse proxy, amongst many other things. I’ve utilized it to serve many web sites and services by leveraging its powerful configuration options, especially in containerized environments.</p>
+							<a href="https://nginx.org/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+					<div class="project" id="linux">
+						<div class="content">
+							<h3>Linux</h3>
+							<p>I’ve utilized Linux as the foundation of the services that I’ve deployed. I am experienced with the terminal environment and understand configuration from a functional and security perspective.</p>
+							<a href="https://ubuntu.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+					<div class="project" id="java">
+						<div class="content">
+							<h3>Java</h3>
+							<p>Much of my academic career focused on understanding java and leveraging it to design object oriented applications. I continue to leverage my java proficiency when learning new languages.</p>
+							<a href="https://www.oracle.com/java/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+					<div class="project" id="python">
+						<div class="content">
+							<h3>Python</h3>
+							<p>Many of the scripts that I’ve written leverage Python’s rich library ecosystem to automate administration tasks. In particular, I’ve used the AWS Boto3 library to execute automated cloud administration.</p>
+							<a href="https://www.python.org/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+					<div class="project" id="javascript">
+						<div class="content">
+							<h3>Javascript</h3>
+							<p>Javascript is still somewhat new to me, but I plan to use it when understanding, architecting and deploying web applications. I am excited to explore the many ways that it can be leveraged throughout an application.</p>
+							<a href="https://www.javascript.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+				</div>
+
+                <div class="projects-grid" id="grid2">
+                    <div class="project" id="github">
+						<div class="content">
+							<h3>GitHub</h3>
+							<p>In my career I’ve leveraged many aspects of the GitHub platform to integrate development and operations agendas into a unified movement. My experience extends beyond version control into automation with GitHub Actions.</p>
+							<a href="https://www.github.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                    <div class="project" id="docker">
+						<div class="content">
+							<h3>Docker</h3>
+							<p>When designing portable multi-cloud applications, I’ve utilized Docker to provide a consistent environment between deployments.  My projects leverage Dockerfile and docker-compose to accomplish this.</p>
+							<a href="https://www.docker.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                    <div class="project" id="vmware">
+						<div class="content">
+							<h3>VMWare</h3>
+							<p>VMWare ESXI and Workstation Pro enable OS virtualization and multi-OS deployments on a single host. I’ve used these tools in my professional and personal ventures to maximize value and performance.</p>
+							<a href="https://www.vmware.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                    <div class="project" id="cisco">
+						<div class="content">
+							<h3>Cisco IOS</h3>
+							<p>I have a strong understanding of networking concepts throughout the OSI data model and have also applied this knowledge in practice with a physical home lab. I’ve used Cisco IOS to deploy and automate networking tasks.</p>
+							<a href="https://www.cisco.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                    <div class="project" id="fortinet">
+						<div class="content">
+							<h3>Fortinet</h3>
+							<p>To ensure a network remains secure I’ve utilized Fortinet security appliances to create rules that filter and inspect traffic. Additionally, I’ve designed and implemented multi-site networks with these appliances.</p>
+							<a href="https://www.fortinet.com/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                    <div class="project" id="kali">
+						<div class="content">
+							<h3>Kali Linux</h3>
+							<p>Kali is my primary tool for testing and strengthening the security of my web applications. I’ve leveraged metasploit and OWASP Zap to closely examine the posture of my applications.</p>
+							<a href="https://www.kali.org/" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                    <div class="project" id="splunk">
+						<div class="content">
+							<h3>Splunk</h3>
+							<p>After deploying my applications either to the cloud or locally, I utilize Splunk to aggregate traffic, access, and security logs. This provides valuable feedback to development and operations teams.</p>
+							<a href="https://www.splunk.com" target="_Blank" class="button">See Tool</a>
+						</div>
+					</div>
+                </div>
+
+				<div class="center" id="view-more">
+					<div class="button is-active" id="more">View More</div>
+                    <div class="button" id="less">View Less</div>
+				</div>
+                
+			</div>
+		</section>
+    
+    
+    
+    </div>
+
+    <div class="footer">
+        <p>made with <ion-icon name="heart" size="small"></ion-icon> in happy valley</p>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script src="/assets/js/tools.js"></script>
 </body>
 </html>
