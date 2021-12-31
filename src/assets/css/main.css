@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+a, a:visited {
+  color: #FFF;
+}
+
 body {
   height: 5000px;
   background-color: #2e2e2e;
