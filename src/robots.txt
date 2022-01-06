@@ -4,7 +4,7 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: http://www.example.com/sitemap.xml
+Sitemap: https://andrewmaier.dev/sitemap.xml
 
 
 Addit'l info: https://developers.google.com/search/docs/advanced/robots/create-robots-txt
