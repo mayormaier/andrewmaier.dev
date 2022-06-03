@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/andrewmaier/Documents/dev/andrewmaier.dev/.github/workflows/deploy.yml"
+    }
 }
