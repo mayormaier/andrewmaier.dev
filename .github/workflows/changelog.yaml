@@ -1,0 +1,21 @@
+name: Update release changelog
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+
+  update:
+    name: Update Changelog
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: get changelog
+      run: |
+        git diff-tree --no-commit-id --name-only -r ${{ github.sha }} >> changelog.temp
+        
