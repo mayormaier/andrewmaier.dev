@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div class="contact-form" v-if="!submitState">
+        <div class="contact-form" v-if="!submitState && !submitError">
             <h1>Contact Me!</h1>
             <p>Looking to get in touch? Leave a message below, and I'll get back to you soon!</p>
             <div class="form-fields">
@@ -11,10 +11,11 @@
                 <button @click="submitMessage" :disabled="!completedState" :class=" {buttonEnabled: completedState} ">Submit</button>
             </div>
         </div>
-        <div class="submitMessage" v-else>
+        <div class="submitMessage" v-if="submitState && !submitError">
             <h1>Message Submitted!</h1>
             <p>Thanks for the message, {{nameField}}! I'll be in touch with you shortly.</p>
         </div>
+        <div class="submitError" v-if="!submitState && submitError"></div>
     </div>
     
 </template>
@@ -27,17 +28,23 @@
         return nameField.value != '' && emailField.value != '' && messageField.value != ''
     })
     const submitState = ref(false)
+    const submitError = ref(false)
     const nameField = ref('')
     const emailField = ref('')
     const messageField = ref('')
 
-    const validateFields = () => {
-
-    }
-
-    const submitMessage = () => {
+    const submitMessage = async () => {
         console.log('submit')
-        submitState.value = true;
+        const message = {
+            name: nameField.value,
+            email: emailField.value,
+            message: messageField.value
+        }
+        await fetch('/post-message/', {
+            method: 'POST',
+            body: JSON.stringify(message)
+        }).then((res) => {if (res.ok) {submitState.value = true;}})
+        
     }
 </script>
 
