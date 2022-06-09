@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Andrew Maier",
+    "short_name": "andrewmaier.dev",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#1b2631",
+    "description": "Andrew Maier: at the intersection of cloud services and cybersecurity",
+    "icons": [
+        {
+            "src": "assets/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-168x168.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }, {
+            "src": "assets/favicon-500x500.png",
+            "sizes": "500x500",
+            "type": "image/png"
+        }
+    ]
+}
