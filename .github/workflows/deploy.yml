@@ -31,7 +31,7 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
       run: |
         cd ./backend
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./lambda-dockerfile .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --build-arg=CONTACT_SENDER_EMAIL=${{ CONTACT_SENDER_EMAIL }} --build-arg=CONTACT_SENDER_IDENTITY=${{ CONTACT_SENDER_IDENTITY }} --build-arg=CONTACT_DESTINATION_EMAIL=${{ CONTACT_DESTINATION_EMAIL }} -f ./lambda-dockerfile .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
         
