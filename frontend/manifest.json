@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "Andrew Maier",
     "short_name": "andrewmaier.dev",
-    "start_url": ".",
+    "start_url": "https://andrewmaier.dev",
     "display": "standalone",
     "background_color": "#1b2631",
     "description": "Andrew Maier: at the intersection of cloud services and cybersecurity",
