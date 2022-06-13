@@ -11,7 +11,8 @@
     "vue": "^3.2.25",
     "vue-ionicons": "^3.0.5",
     "vue-meta": "^2.4.0",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.0.15",
+    "vue3-spinners": "^1.2.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
