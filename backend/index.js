@@ -25,7 +25,7 @@ const successResponse = {
     "body": "{ \"result\": \"Success\"\n}"
 }
 
-exports.handler =  async function(event, context) {
+export const handler =  async function(event, context) {
     console.log("EVENT: \n" + JSON.stringify(event, null, 2))
     if (event.requestContext.http.method == "POST") {
         const requestBody = JSON.parse(event.body)
