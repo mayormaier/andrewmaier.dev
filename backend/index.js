@@ -1,6 +1,6 @@
-const moment = require('moment')
-const AWS = require('aws-sdk')
-const ses = new AWS.SESV2({apiVersion: '2019-09-27'});
+import moment from "moment";
+import { SESv2Client, SendEmailCommand } from "@aws-sdk/client-sesv2";
+const ses = new SESv2Client({ region: "us-east-2" })
 
 const failureResponse = {
     "statusCode": 400,
@@ -30,15 +30,8 @@ exports.handler =  async function(event, context) {
     if (event.requestContext.http.method == "POST") {
         const requestBody = JSON.parse(event.body)
         if (requestBody.name && requestBody.email && requestBody.message) {
-            sendEmail(requestBody, (err, data) => {
-                if (err) {
-                    console.log(err, err.stack)
-                    return errorResponse
-                } else {
-                    console.log(data)
-                    return successResponse
-                }
-            })
+            const sendResponse = await sendEmail(requestBody)
+            return sendResponse
         } else {
             console.log(`ERROR: Request failure: Missing request argument`)
             return failureResponse
@@ -49,7 +42,7 @@ exports.handler =  async function(event, context) {
     }
 }
 
-function sendEmail (event, done) {
+async function sendEmail (event) {
     const params = {
         Content: {
             Simple: {
@@ -76,5 +69,14 @@ function sendEmail (event, done) {
             event.email
         ]
     }
-    ses.sendEmail(params, done)
+
+    const command = new SendEmailCommand(params)
+    try {
+        const data = await ses.send(command)
+        console.log(data)
+        return successResponse
+    } catch (err) {
+        console.log(`ERROR: ${err}`)
+        return errorResponse
+    }
 }
