@@ -8,7 +8,7 @@
                 <input type="text" placeholder="Name" id="nameField" v-model="nameField">
                 <input type="email" placeholder="Email" id="emailField" v-model="emailField">
                 <textarea name="message" placeholder="Message for Andrew" id="messageField" cols="30" rows="10" v-model="messageField"></textarea>
-                <button @click="loadTest" :disabled="!completedState" :class=" {buttonEnabled: completedState} ">Submit</button>
+                <button @click="submitMessage" :disabled="!completedState" :class=" {buttonEnabled: completedState} ">Submit</button>
             </div>
         </div>
         <div class="submitMessage" v-if="submitState && !submitError && !loadingState">
@@ -46,7 +46,6 @@
     })
 
     const submitMessage = async () => {
-        console.log('submit')
         loadingState.value = true
         const message = {
             name: nameField.value,
@@ -71,18 +70,6 @@
         location.reload()
     }
 
-    const loadTest = () => {
-        console.log('start')
-        console.log(loadingState.value)
-         loadingState.value = true
-         setTimeout(() => {
-            loadingState.value = false
-            submitError.value = true
-            
-
-         }, 3000)
-         
-    }
 </script>
 
 <style lang="scss" scoped>
