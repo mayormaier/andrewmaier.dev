@@ -65,11 +65,11 @@ function sendEmail (event, done) {
                 }
             }
         },
-        FromEmailAddress: process.env('CONTACT_SENDER_EMAIL'),
-        FromEmailAddressIdentityArn: process.env('CONTACT_SENDER_IDENTITY'),
+        FromEmailAddress: process.env.CONTACT_SENDER_EMAIL,
+        FromEmailAddressIdentityArn: process.env.CONTACT_SENDER_IDENTITY,
         Destination: {
             ToAddresses: [
-                process.env('CONTACT_DESTINATION_EMAIL')
+                process.env.CONTACT_DESTINATION_EMAIL
             ]
         },
         ReplyToAddresses: [
