@@ -13,6 +13,12 @@ jobs:
 
     - uses: actions/checkout@master
 
+    - name: Install AWS CLI
+      id: install-aws-cli
+      uses: unfor19/install-aws-cli-action@v1.0.3
+      with:
+        arch: amd64
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -25,6 +31,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build, tag, and push image to Amazon ECR
+      id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
@@ -36,6 +43,15 @@ jobs:
         cd ./backend
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --build-arg=CONTACT_SENDER_EMAIL=$CONTACT_SENDER_EMAIL --build-arg=CONTACT_SENDER_IDENTITY=$CONTACT_SENDER_IDENTITY --build-arg=CONTACT_DESTINATION_EMAIL=$CONTACT_DESTINATION_EMAIL -f ./lambda-dockerfile .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+
+    - name: Force Lambda Update
+      env: 
+        LAMBDA_ARN: ${{ secrets.BACKEND_LAMBDA_ARN }}
+        IMAGE_ID: ${{ steps.build-image.outputs.image }}
+      run: |
+        aws lambda update-function-code --function-name $LAMBDA_ARN --image-uri $IMAGE_ID
+
 
         
   deploy-frontend:
