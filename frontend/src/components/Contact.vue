@@ -58,9 +58,10 @@
         }).then((res) => { 
             if (res.ok) {
                 submitState.value = true;
-                confetti.render()
             }
-            else {submitError.value = true}
+            else {
+                submitError.value = true
+            }
             loadingState.value = false
         })
         
