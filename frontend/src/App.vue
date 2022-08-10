@@ -1,5 +1,6 @@
 <script setup>
   import Navigation from './components/Navigation.vue';
+  import ThonModal from './components/ThonModal.vue'
 </script>
 
 <script>
@@ -17,6 +18,7 @@
 </script>
 
 <template>
+  <ThonModal></ThonModal>
   <div class="wrapper">
     <Navigation></Navigation>
     <div class="content-container">
